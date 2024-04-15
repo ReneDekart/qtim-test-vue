@@ -1,0 +1,24 @@
+@import "reset";
+
+@font-face {
+  font-family: 'TTcomons', sans-serif;
+  src: url('/fonts/TTComons.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  font-family: TTcomons, sans-serif;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 84px;
+  line-height: 84px;
+}
+
+a {
+  color: inherit;
+}
+
