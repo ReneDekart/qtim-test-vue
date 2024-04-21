@@ -1,5 +1,5 @@
 <template>
-    <main class="main-page__wrapper">
+    <main class="main-page__wrapper py-12 gap-16 flex flex-col items-center">
         <NuxtImg src="/main_image.png" />
         <div>QTIM — тестовое задание</div>
         <NuxtLink
@@ -13,12 +13,7 @@
 
 <style lang="scss" scoped>
 .main-page__wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 100px 145px;
-    gap: 130px;
-
+    
     .main-page__link {
         width: 360px;
         height: 360px;
@@ -28,6 +23,10 @@
         justify-content: center;
         background-color: $purple-light;
         color: $black-100;
+
+        &:hover {
+            background-color: $purple-dark;
+        }
     }
 }
 </style>
