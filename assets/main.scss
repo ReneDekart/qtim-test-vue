@@ -1,4 +1,4 @@
-@import "reset";
+//@import "reset";
 
 @font-face {
   font-family: 'TTcomons', sans-serif;
@@ -10,6 +10,7 @@
 
 html {
   font-family: TTcomons, sans-serif;
+  color: $black-900;
 }
 
 h1 {
@@ -19,6 +20,5 @@ h1 {
 }
 
 a {
-  color: inherit;  
+  color: inherit;
 }
-

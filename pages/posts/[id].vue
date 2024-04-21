@@ -14,45 +14,18 @@ if (error.value) {
 </script>
 
 <template>
-    <main class="post__wrapper">
-        <h1>{{ post.preview }}</h1>
-        <div class="post__image">
+    <main class="post__wrapper px-0 md:px-8 lg:px-14 xl:px-20 pt-10 lg:pt-28 ">
+        <h1 class="text-4xl lg:text-7xl">{{ post.preview }}</h1>
+        <div class="pt-10 lg:pt-20 flex items-center">
             <NuxtImg
+                class="w-full"
                 placeholder="/no_image.png"
                 :src="post.image"  
             />
         </div>
-        <div class="post__description">
-            <span :style="{ fontSize: '16px' }">About</span>
+        <div class="max-w-[695px] pt-10 pb-20 flex flex-col gap-8 text-2xl lg:text-4xl leading-10">
+            <span class="text-base">About</span>
             <p>{{ post.description }}</p>
         </div>
     </main>
 </template>
-
-<style lang="scss" scoped>
-.post__wrapper {
-    padding-inline: 112px;
-    padding-top: 120px;
-
-    .post__image {
-        padding-top: 80px;
-        display: flex;
-        align-items: center;
-
-        > img {
-            width: 100%;
-        }
-    }
-
-    .post__description {
-        max-width: 695px;
-        display: flex;
-        flex-direction: column;
-        padding-top: 40px;
-        gap: 32px;
-        font-size: 36px;
-        line-height: 44px;
-        padding-bottom: 80px;
-    }
-}
-</style>

@@ -1,5 +1,5 @@
 <template>
-    <svg
+    <svg class="h-full m-auto"
         width="8"
         height="13"
         viewBox="0 0 8 13"

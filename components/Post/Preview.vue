@@ -16,20 +16,19 @@ const postLink = computed<string>(() => {
 
 <template>
     <NuxtLink
-        class="post-preview__wrapper"
+        class="post-preview__container h-[414px] w-[280px] flex flex-col justify-end hover:cursor-pointer"
         :to="postLink"
         @mouseover="isHovered = true"
         @mouseleave="isHovered = false"
     >
         <NuxtImg
-            placeholder="no_image.png"
+            class="h-[280px] w-[280px] mb-6 object-cover"
+            placeholder="/no_image.png"
             :src="imageUrl"
-            height="280"
-            width="280"
         />
-        <div class="post-preview__shot-description">
+        <p class="h-[74px] mb-3 text-xl leading-6 line-clamp-3">
             {{ preview }}
-        </div>
+        </p>
         <div
             v-show="isHovered"
             class="post-preview__link"
@@ -40,29 +39,7 @@ const postLink = computed<string>(() => {
 </template>
 
 <style lang="scss" scoped>
-.post-preview__wrapper {
-    height: 414px;
-    width: 280px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    gap: 24px;
-    text-decoration: none;
-    color: $black-900;
-
-    &:hover {
-        cursor: pointer;
-    }
-
-    > img {
-        object-fit: cover;
-    }
-
-    .post-preview__shot-description {
-        font-size: 20px;
-        height: 74px;
-    }
-
+.post-preview__container {
     .post-preview__link {
         color: $purple-light;
     }

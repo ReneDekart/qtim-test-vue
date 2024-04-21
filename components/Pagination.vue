@@ -31,7 +31,7 @@ const changePage = (value: number) => {
     }
 };
 
-//computed
+//computeds
 const showLeft = computed<boolean>(() => {
     const { currentPage, showItems } = props;
     return !(currentPage < showItems);
@@ -75,7 +75,7 @@ const visibleItems = computed<Array<number>>(() => {
 </script>
 
 <template>
-    <div class="pagination__wrapper">
+    <div class="pagination__wrapper flex gap-2">
         <ButtonRounded
             v-show="showLeft"
             class="pagination__arrow-button"
@@ -102,30 +102,23 @@ const visibleItems = computed<Array<number>>(() => {
 
 <style lang="scss" scoped>
 .pagination__wrapper {
-    display: flex;
-    gap: 8px;
-}
-
-.active-item {
-    background-color: $black-900;
-    color: white;
-
-    &:hover {
+    .active-item {
         background-color: $black-900;
-        cursor: default;
-    }
-}
+        color: white;
 
-.pagination__arrow-button {
-    background-color: white;
-    border: solid 1px $black-200;
-
-    > svg {
-        height: 100%;
+        &:hover {
+            background-color: $black-900;
+            cursor: default;
+        }
     }
 
-    &:hover {
-        background-color: $black-200;
+    .pagination__arrow-button {
+        background-color: white;
+        border: solid 1px $black-200;
+
+        &:hover {
+            background-color: $black-200;
+        }
     }
 }
 </style>
